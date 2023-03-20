@@ -1,0 +1,14 @@
+Package: Moncrief
+Type: Package
+Title: This package is used to count the number of specified keywords in a dataframe.
+Version: 0.0.0.9000
+Author: "Robert Moncrief <rmoncrief@usf.edu> [aut, cre]"
+Maintainer: rmoncrief@usf.edu
+Description: This package can be used to count items in a dataframe. 
+    The "getCount()"" function takes the count of any variable specified after the dataframe 
+    in the function. For example, getCount(data$X, example) would count how many occurences 
+    of the word "example" appears in the specified datafame and column.
+Depends: R (>= 3.1.2)
+License: GNU
+Encoding: UTF-8
+LazyData: true
