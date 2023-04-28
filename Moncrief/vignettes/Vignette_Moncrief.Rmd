@@ -1,0 +1,70 @@
+---
+title: "Vignette Moncrief"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Moncrief}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Moncrief)
+```
+
+This is an introduction to the Moncrief Package.
+We use this package to manipulate strings, from the count of certain strings to whether the string is a palindrome or not. This package also has functions to generate a random password and determine if a number is prime or not.
+
+I will begin with a simple function, the is_prime() function measures if a number is prime or not.
+
+```{r}
+
+is_prime(973)
+
+```
+
+The next function is named generate_password() and is used to generate a random password with customizable parameters. The below function generates a 10 digit string with random letters and number all uppercase with special characters.
+
+```{r}
+
+generate_password(10, uppercase = TRUE, lowercase = FALSE, numbers = TRUE, special_chars = TRUE)
+
+```
+
+The next function I will be exampling is named "shuffle_string()". This function simply shuffles up the order of the string, which can be really useful in certain situations. The below function will scramble the name robert into a random order : 
+
+```{r}
+
+shuffle_string('robert')
+
+```
+
+The next function reverses the string of any string it is given. The below string will be changed to sdlanodcM. This shows the user how this function can be used :
+
+```{r}
+
+reverse_string('Mcdonalds')
+
+```
+
+The next function calculates or figures out if the given string is a palindrome. Can the word be spelled backwards and still be the same word? Below is an example of how to use this function :
+
+```{r}
+
+is_palindrome('madam')
+
+```
+
+The last function calculates the count of any given string inside of any given dataset. The functions require the data to only have one column so if you try to use this function with somethong other than that you will get an error. Below is an example of how this function can be used : 
+
+```{r}
+
+getCount(mtcars$cyl, '6')
+
+```
